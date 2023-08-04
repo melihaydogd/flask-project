@@ -1,3 +1,7 @@
+# flask-project
+
+The application returns 5 closest restaurants in 10km range. It uses latitude and longitude that are given in query parameters.
+
 # Starting the Application
 
 Python 3.9.0 is used.
