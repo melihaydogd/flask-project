@@ -18,12 +18,12 @@ def hello():
             select 
                 *, 
                 acos(sin(latitude/57.3) * sin(%s/57.3) + cos(latitude/57.3) * cos(%s/57.3) * cos(%s/57.3-longitude/57.3)) * 6371 as km 
-                from restaurant_branches
+            from restaurant_branches
         ) as subquery
         where km <= 10
         order by km asc
         limit 5
-        """
+    """
     result = db.execute_query(connection, query, [lattitude, lattitude, longitude])
     return result
 
